@@ -1,0 +1,4 @@
+@media print {
+  body * { display: none !important; }
+  body:after { @include center; content: "Please don't waste paper"; }
+}

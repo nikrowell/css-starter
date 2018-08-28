@@ -1,0 +1,51 @@
+
+@function linear-interpolation($map) {
+
+  $keys: map-keys($map);
+  @if(length($keys) != 2) { @error 'linear-interpolation() $map must be exactly 2 values'; }
+
+  $m: (map-get($map, nth($keys, 2)) - map-get($map, nth($keys, 1)))/(nth($keys, 2) - nth($keys,1));
+  $b: map-get($map, nth($keys, 1)) - $m * nth($keys, 1);
+  $sign: "+";
+
+  @if($b < 0) {
+    $sign: "-";
+    $b: abs($b);
+  }
+
+  @return calc(#{$m*100}vw #{$sign} #{$b});
+}
+
+@function list-remove($list, $index) {
+  $new_list: ();
+  @for $i from 1 through length($list) {
+    @if $i != $index {
+      $new_list: append($new_list, nth($list,$i), 'space');
+    }
+  }
+  @return $new_list;
+}
+
+@function list-sort($list) {
+  $sorted: ();
+  @while length($list) > 0 {
+    $value: nth($list,1);
+    @each $item in $list {
+      @if $item < $value {
+        $value: $item;
+      }
+    }
+    $sorted: append($sorted, $value, 'space');
+    $list: list-remove($list, index($list, $value));
+  }
+  @return $sorted;
+}
+
+@function map-sort($map) {
+  $keys: list-sort(map-keys($map));
+  $sorted: ();
+  @each $key in $keys {
+    $sorted: map-merge($sorted, ($key: map-get($map, $key)));
+  }
+  @return $sorted;
+}

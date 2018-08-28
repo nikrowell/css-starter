@@ -1,0 +1,63 @@
+
+.clearfix:before,
+.clearfix:after {
+  content: ' ';
+  display: table;
+  line-height: 0;
+}
+.clearfix:after {
+  width: 100%;
+  clear: both;
+}
+
+.show {
+  display: inherit !important;
+}
+.hide {
+  display: none !important;
+}
+
+.hidden {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+.text-center {
+  text-align: center !important;
+}
+.text-right {
+  text-align: right !important;
+}
+
+.text-lower {
+  text-transform: lowercase !important;
+}
+.text-upper {
+  text-transform: uppercase !important;
+}
+
+.text-xs {
+  font-size: var(--text-xs);
+}
+.text-sm {
+  font-size: var(--text-sm);
+}
+.text-md {
+  font-size: var(--text-md);
+}
+.text-lg {
+  font-size: var(--text-lg);
+}
+.text-xl {
+  font-size: var(--text-xl);
+}
+
+.truncate {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

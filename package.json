@@ -1,0 +1,15 @@
+{
+  "name": "mocsss",
+  "version": "0.0.0",
+  "scripts": {
+    "start": "run-p serve watch",
+    "serve": "live-server --ignorePattern=\".css.map|.git/*|.sass-cache/*|scss/*\"",
+    "watch": "node-sass --watch --source-map=true scss/index.scss build.css",
+    "build": "node-sass --output-style=compressed scss/index.scss build.min.css"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.0",
+    "node-sass": "^4.9.3",
+    "npm-run-all": "^4.1.3"
+  }
+}
