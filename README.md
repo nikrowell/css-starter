@@ -10,9 +10,21 @@ This repository is meant to be downloaded and used as the starting point for oth
 - A familar flexbox column layout for when you don't want to (or can't) use CSS grid
 - An [ITCSS](https://itcss.io/)-like approach (Inverted Triangle CSS) with fewer confusing layers
 - Environmentally friendly print styles
+- Follows the [Airbnb CSS Style Guide](https://github.com/airbnb/css), with the minor exception of tigher formatting in a few places
 - An empty components folder for all of your project-specific [BEM](http://getbem.com/) components
 
 The (soon-to-be-included) example index.html file contains a list commonly used `<head>` meta tags.
+
+## Files and Folders
+
+#### abstracts
+#### base
+#### blocks (think OOCSS)
+#### components (think BEM)
+
+## Blocks vs Components
+
+## Containers vs Sections
 
 ## Development and Hacking
 
@@ -21,11 +33,11 @@ npm install
 npm start
 ```
 
-This installs [node-sass](https://www.npmjs.com/package/node-sass) for processing SASS files (and seems to be faster than the ruby gem) and [live-server](https://www.npmjs.com/package/live-server) for starting a development server with live reload.
+This installs [node-sass](https://www.npmjs.com/package/node-sass) for processing SASS files (which seems to be faster than the ruby gem) and [live-server](https://www.npmjs.com/package/live-server) for starting a development server with live reload.
 
 ## Browser Support
 
-Modern browsers due to the use of [CSS custom properties](https://caniuse.com/#feat=css-variables). If you need to support IE11, you can either add fallback styles _before_ using `var(--my-property)` or load a custom stylesheet (which can be used to address other IE quriks). Here's a snippet for that:
+Modern browsers due to the use of [CSS custom properties](https://caniuse.com/#feat=css-variables). If you need to support IE11, you can either add fallback styles _before_ using `var(--my-property)` or load a custom stylesheet (which can be used to address other IE quirks). Here's a snippet for that:
 
 ```js
 // only Internet Explorer has this property defined
