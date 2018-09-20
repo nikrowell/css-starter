@@ -1,6 +1,30 @@
 
+$font-primary: 'Open Sans', sans-serif;
+$font-secondary: 'PT Serif', serif;
+
+$color-primary: #F00;
+$color-primary-dark: darken($color-primary, 20);
+$color-primary-light: lighten($color-primary, 20);
+$color-secondary: #0F0;
+$color-secondary-dark: darken($color-secondary, 20);
+$color-secondary-light: lighten($color-secondary, 20);
+$color-accent: #00F;
+$color-accent-dark: darken($color-accent, 20);
+$color-accent-light: lighten($color-accent, 20);
+$color-bg: #FFF;
+$color-text: #333;
+$color-text-dark: #151515;
+$color-text-light: #666;
+$color-line: rgba($color-text,0.25);
+$color-link: $color-primary;
+$color-link-hover: $color-primary-light;
+$color-error: #f5414f;
+$color-success: #88c459;
+$color-warning: #ffd137;
+
 $container-width: 1200px;
 $container-padding: 15px;
+$section-padding: 5rem;
 
 $column-count: 12;
 $column-gap: 20px;
@@ -14,39 +38,39 @@ $xl: 1200px;
 
 :root {
 
-  --container-width: #{$container-width};
-  --container-padding: #{$container-padding};
-
-  --color-primary: #F00;
-  --color-secondary: #0F0;
-  --color-bg: #f1f1f1;
-  --color-text: #333;
-  --color-text-light: #666;
-  --color-text-dark: #151515;
-  --color-line: rgba(0,0,0,0.2);
-  --color-link: var(--color-primary);
-  --color-link-hover: #A42;
-
-  --font-size: 16px;
-  --font-primary: sans-serif;
-  --font-secondary: serif;
+  --font-size: 1em;
+  --font-primary: #{$font-primary};
+  --font-secondary: #{$font-secondary};
   --line-height: 1.4;
 
-  --text-scale: 1.33;
+  // http://type-scale.com/
+  --text-scale: 1.414;
   --text-sm: calc(1em / var(--text-scale));
   --text-md: calc(1em * var(--text-scale));
   --text-lg: calc(1em * var(--text-scale) * var(--text-scale));
   --text-xl: calc(1em * var(--text-scale) * var(--text-scale) * var(--text-scale));
+  --text-xxl: calc(1em * var(--text-scale) * var(--text-scale) * var(--text-scale) * var(--text-scale));
 
-  --space-unit: 1em; // 16
+  --space-unit: 1em;
   --space-xs: calc(var(--space-unit) * 0.5);  // 8
   --space-sm: calc(var(--space-unit) * 0.75); // 12
   --space-md: calc(var(--space-unit) * 1.25); // 20
   --space-lg: calc(var(--space-unit) * 2);    // 32
   --space-xl: calc(var(--space-unit) * 3.25); // 52
 
+  --container-width: #{$container-width};
+  --container-padding: #{$container-padding};
+  --section-padding: #{$section-padding};
+
+  @media (max-width: 480px) {
+    --text-scale: 1.333;
+  }
+
+  @media (min-width: 768px) {
+    --font-size: 1.0625em;
+  }
+
   @media (min-width: 1024px) {
-    --font-size: 18px;
-    --font-size: 20px;
+    --font-size: 1.125em;
   }
 }

@@ -1,15 +1,4 @@
 
-.container {
-  width: 100%;
-  max-width: $container-width + ($container-padding * 2);
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: $container-padding;
-  padding-left: var(--container-padding);
-  padding-right: $container-padding;
-  padding-right: var(--container-padding);
-}
-
 .columns {
   display: flex;
   flex-direction: row;

@@ -1,4 +1,4 @@
-# MOCSSS (Modern Organized CSS Starter)
+# CSS Starter
 
 This repository is meant to be downloaded and used as the starting point for other projects. Drop the **scss** folder into your project and update your watch or build scripts accordingly.
 
@@ -8,21 +8,18 @@ This repository is meant to be downloaded and used as the starting point for oth
 - An index.scss entry point for all SASS partials
 - CSS variables to help manage layout, responsive font sizes and spacing
 - A familar flexbox column layout for when you don't want to (or can't) use CSS grid
-- An [ITCSS](https://itcss.io/)-like approach (Inverted Triangle CSS) with fewer confusing layers
+- An [ITCSS](https://itcss.io/)-like approach (Inverted Triangle CSS) with fewer layers
 - Environmentally friendly print styles
 - Follows the [Airbnb CSS Style Guide](https://github.com/airbnb/css), with the minor exception of tigher formatting in a few places
-- An empty components folder for all of your project-specific [BEM](http://getbem.com/) components
+- A components folder for all of your project-specific [BEM](http://getbem.com/) components
 
-The (soon-to-be-included) example index.html file contains a list commonly used `<head>` meta tags.
+index.html file with commonly used `<head>` meta tags.
 
 ## Files and Folders
 
 #### abstracts
 #### base
-#### blocks (think OOCSS)
-#### components (think BEM)
-
-## Blocks vs Components
+#### components (OOCSS and BEM)
 
 ## Containers vs Sections
 
