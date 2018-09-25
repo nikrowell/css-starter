@@ -8,11 +8,11 @@
   p + h2,
   p + h3,
   p + h4 {
-    margin-top: 1em;
+    margin-top: 0.5em;
   }
 
   h2, h3 {
-    margin-bottom: var(--space-xs);
+    margin-bottom: var(--spacing-xs);
   }
 
   a {

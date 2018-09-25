@@ -12,32 +12,32 @@ h1, .h1,
 h2, .h2,
 h3, .h3,
 h4, .h4 {
-  color: var(--color-text);
+  font-family: var(--font-secondary);
   font-weight: 400;
   line-height: 1.25;
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-text);
 }
+
 h1, .h1 {
   font-size: var(--text-xxl);
-  font-family: var(--font-secondary);
-  margin-bottom: var(--space-md);
+  margin-bottom: var(--spacing-xs);
 }
+
 h2, .h2 {
   font-size: var(--text-xl);
-  font-family: var(--font-secondary);
-  margin-bottom: var(--space-sm);
 }
+
 h3, .h3 {
   font-size: var(--text-lg);
-  font-family: var(--font-secondary);
 }
+
 h4, .h4 {
   font-size: var(--text-md);
-  font-family: var(--font-secondary);
 }
 
 p {
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--spacing-lg);
 }
 p:last-child {
   margin-bottom: 0;
@@ -75,7 +75,7 @@ hr {
   clear: both;
   width: 100%;
   height: 1px;
-  margin: var(--space-md) 0;
+  margin: var(--spacing-md) 0;
   background-color: $color-line;
   line-height: 0;
   border: none;

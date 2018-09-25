@@ -72,6 +72,36 @@
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,700|PT+Serif:400,700">
   <link rel="stylesheet" href="/build.css">
 
+  <style>
+
+  .article {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .articles {
+    display: grid;
+    grid-gap: 20px;
+    --section-padding: 30px;
+  }
+  @media (min-width: 800px) {
+    .articles {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  .article-item--featured {
+    grid-column: 1 / -1;
+  }
+  .article-item {
+    border-radius: 5px;
+    background: #CCC;
+    text-align: center;
+    padding: 10px;
+  }
+
+  </style>
+
 </head>
 <body>
 
@@ -120,40 +150,18 @@
         <p class="footnote">Pariatur et eos expedita eos sint modi est ut. Rerum molestiae magni quasi dolorum consequatur harum molestiae. Aut sunomnis atque deserunt molestiae. Molestias similique et deserunt sint molestias autem non autem. Nemo itaque repellat assumenda nostrum qui eos porro dolorum.</p>
       </div>
 
-    </article>
-
-    <div class="articles section">
+      <div class="articles section">
         <div class="article-item article-item--featured">
-          featured item
+          featured item <a href="#" class="btn">Button</a>
         </div>
         <div class="article-item">1</div>
         <div class="article-item">2</div>
         <div class="article-item">3</div>
         <div class="article-item">4</div>
         <div class="article-item">5</div>
-    </div>
-
-    <div class="container" style="background-color:#E5E5E5;margin-top:2em;margin-bottom:2em;padding-top:1em;padding-bottom:1em;">
-
-      <h2>Lorem Ipsum Dolor</h2>
-      <p>Lorem ipsum dolor sit amet, <a href="#">consectetur</a> adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <h4>Another Heading</h4>
-      <p>Eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est</p>
-      <hr>
-      <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-      <small>Some fine print can go here</small>
-
-      <div class="columns" style="margin-bottom:-15px">
-        <div class="col col-lg-3" style="padding:5px;margin-bottom:15px;background:#CCC">col</div>
-        <div class="col col-lg-3" style="padding:5px;margin-bottom:15px;background:#CCC">col</div>
-        <div class="col col-lg-6" style="padding:5px;margin-bottom:15px;background:#CCC">col</div>
-        <div class="col col-lg-4" style="padding:5px;margin-bottom:15px;background:#CCC">col</div>
-        <div class="col col-lg-4" style="padding:5px;margin-bottom:15px;background:#CCC">col</div>
-        <div class="col col-lg-4" style="padding:5px;margin-bottom:15px;background:#CCC">col</div>
       </div>
 
-    </div>
+    </article>
 
   </main>
 
@@ -169,7 +177,7 @@
 
 document.body.addEventListener('click', function(event) {
   if (event.target.matches('.js-toggle-nav')) {
-    document.documentElement.classList.toggle('nav-active');
+    document.body.classList.toggle('nav-active');
   }
 });
 

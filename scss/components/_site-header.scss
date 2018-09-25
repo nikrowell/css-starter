@@ -1,0 +1,15 @@
+.site-header {
+  padding-top: var(--spacing-md);
+  padding-bottom: var(--spacing-md);
+  color: #FFF;
+  background:#335;
+}
+
+.logo {
+  width: 180px;
+  @include ratio(300, 150);
+}
+.logo a {
+  background-color: #F00;
+  text-indent: -9999px;
+}
