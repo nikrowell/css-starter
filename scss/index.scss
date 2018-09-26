@@ -6,6 +6,7 @@
 
 @import
   'base/reset',
+  'base/fonts',
   'base/elements',
   'base/layout',
   'base/columns',
@@ -25,7 +26,22 @@
   'components/nav',
   'components/page-header',
   'components/site-header',
-  'components/site-footer';
+  'components/site-footer',
+  'components/social';
+
+  // article-head
+  // article-meta
+  // breadcrumb
+  // contact-cta
+  // forms
+  // hero
+  // home
+  // nav-archive
+  // nav-categories
+  // nav-posts
+  // nav-secondary
+  // pagination
+  // share
 
 @import
   'base/print',

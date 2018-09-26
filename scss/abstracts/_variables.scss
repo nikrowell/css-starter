@@ -43,26 +43,21 @@ $xl: 1200px;
   --font-secondary: #{$font-secondary};
   --line-height: 1.4;
 
-  // http://type-scale.com/
-  --text-scale: 1.333;
+  --text-scale: 1.333; // http://type-scale.com/
   --text-sm:  calc(1em / var(--text-scale));
   --text-md:  calc(1em * var(--text-scale));
   --text-lg:  calc(1em * var(--text-scale) * var(--text-scale));
   --text-xl:  calc(1em * var(--text-scale) * var(--text-scale) * var(--text-scale));
   --text-xxl: calc(1em * var(--text-scale) * var(--text-scale) * var(--text-scale) * var(--text-scale));
 
-  --spacing-unit: 1em;
-  --spacing-xxs: calc(var(--spacing-unit) * 0.25); // 4
-  --spacing-xs:  calc(var(--spacing-unit) * 0.5);  // 8
-  --spacing-sm:  calc(var(--spacing-unit) * 0.75); // 12
-  --spacing-md:  calc(var(--spacing-unit) * 1.25); // 20
-  --spacing-lg:  calc(var(--spacing-unit) * 2);    // 32
-  --spacing-xl:  calc(var(--spacing-unit) * 3.25); // 52
-  --spacing-xxl: calc(var(--spacing-unit) * 5.25); // 84
-
-  --container-width: #{$container-width};
-  --container-padding: #{$container-padding};
-  --section-padding: #{$section-padding};
+  --space-unit: 1em;
+  --space-xxs: calc(var(--space-unit) * 0.25); // 4
+  --space-xs:  calc(var(--space-unit) * 0.5);  // 8
+  --space-sm:  calc(var(--space-unit) * 0.75); // 12
+  --space-md:  calc(var(--space-unit) * 1.25); // 20
+  --space-lg:  calc(var(--space-unit) * 2);    // 32
+  --space-xl:  calc(var(--space-unit) * 3.25); // 52
+  --space-xxl: calc(var(--space-unit) * 5.25); // 84
 
   @media (min-width: 480px) {
     --text-scale: 1.414;
@@ -75,4 +70,27 @@ $xl: 1200px;
   @media (min-width: 1024px) {
     --font-size: 1.125em;
   }
+
+  --container-width: #{$container-width};
+  --container-padding: #{$container-padding};
+  --section-padding: #{$section-padding};
+
+  --ease-in-quad: cubic-bezier(.55,.085,.68,.53);
+  --ease-in-cubic: cubic-bezier(.550,.055,.675,.19);
+  --ease-in-quart: cubic-bezier(.895,.03,.685,.22);
+  --ease-in-quint: cubic-bezier(.755,.05,.855,.06);
+  --ease-in-expo: cubic-bezier(.95,.05,.795,.035);
+  --ease-in-circ: cubic-bezier(.6,.04,.98,.335);
+  --ease-out-quad: cubic-bezier(.25,.46,.45,.94);
+  --ease-out-cubic: cubic-bezier(.215,.61,.355, 1);
+  --ease-out-quart: cubic-bezier(.165,.84,.44, 1);
+  --ease-out-quint: cubic-bezier(.23, 1,.32, 1);
+  --ease-out-expo: cubic-bezier(.19, 1,.22, 1);
+  --ease-out-circ: cubic-bezier(.075,.82,.165, 1);
+  --ease-in-out-quad: cubic-bezier(.455,.03,.515,.955);
+  --ease-in-out-cubic: cubic-bezier(.645,.045,.355, 1);
+  --ease-in-out-quart: cubic-bezier(.77, 0,.175, 1);
+  --ease-in-out-quint: cubic-bezier(.86, 0,.07, 1);
+  --ease-in-out-expo: cubic-bezier(1, 0, 0, 1);
+  --ease-in-out-circ: cubic-bezier(.785,.135,.15,.86);
 }

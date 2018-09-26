@@ -132,10 +132,10 @@
 
   <main class="site-main">
 
-    <article class="article container">
+    <article class="article">
 
-      <header class="article-header">
-        <h1 class="article-title">Lorem Ipsum Page Title</h1>
+      <header class="page-header">
+        <h1 class="page-title">Lorem Ipsum Page Title</h1>
       </header>
 
       <div class="content clearfix">
@@ -152,13 +152,14 @@
 
       <div class="articles section">
         <div class="article-item article-item--featured">
-          featured item <a href="#" class="btn">Button</a>
+          Lorem ipsum dolor featured item <a href="#" class="btn">Button</a>
         </div>
         <div class="article-item">1</div>
         <div class="article-item">2</div>
         <div class="article-item">3</div>
         <div class="article-item">4</div>
         <div class="article-item">5</div>
+        <div class="article-item">6</div>
       </div>
 
     </article>
@@ -166,21 +167,22 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      footer
+
+    <div class="footer-primary">
+      <div class="container">
+        footer
+      </div>
     </div>
+
+    <div class="footer-secondary">
+      &copy; 2018 CSS Starter
+    </div>
+
   </footer>
 
 </div>
 
 <script>
-
-document.body.addEventListener('click', function(event) {
-  if (event.target.matches('.js-toggle-nav')) {
-    document.body.classList.toggle('nav-active');
-  }
-});
-
 (function(doc) {
   if (!doc.documentMode) return;
   var div = document.createElement('div');

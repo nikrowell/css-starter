@@ -7,9 +7,6 @@
 // .nav-active .site {
 //   overflow: hidden;
 // }
-// .nav-active .nav {
-//   transform: translate3d(0,0,0);
-// }
 
 .nav {
   position: fixed;
@@ -35,5 +32,5 @@
 .nav__close {
   position: absolute;
   top: 50px;
-  right: var(--spacing-xl);
+  right: var(--space-xl);
 }

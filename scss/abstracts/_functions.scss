@@ -8,7 +8,7 @@
   $b: map-get($map, nth($keys, 1)) - $m * nth($keys, 1);
   $sign: "+";
 
-  @if($b < 0) {
+  @if ($b < 0) {
     $sign: "-";
     $b: abs($b);
   }

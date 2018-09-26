@@ -1,0 +1,36 @@
+.btn {
+  @include no-select;
+  display: inline-flex;
+  position: relative;
+  margin: 0;
+  padding: var(--space-sm) var(--space-md);
+  font-size: 1rem;
+  font-family: $font-primary;
+  line-height: 1;
+  color: #FFF;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  background-color: $color-primary;
+  border-radius: 5px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  transition: .2s;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.btn:hover {
+  color: #FFF;
+  background-color: #555;
+  text-decoration: none;
+}
+
+.btn[disabled] {
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
