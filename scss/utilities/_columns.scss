@@ -1,0 +1,38 @@
+
+$column-count: 12;
+$column-gap: 20px;
+$column-margin: $column-gap / 2;
+
+@mixin cols($bp: '', $count: $column-count, $gap: $column-gap, $margin: $column-margin) {
+
+  @for $i from 1 through $count {
+
+    $width: percentage($i / $count);
+    $prefix: '';
+    @if ($bp != '') { $prefix: '#{$bp}\\:'; }
+
+    .#{$prefix}col-#{$i}        { width: calc(#{$width} - #{$gap}) }
+    .#{$prefix}col-offset-#{$i} { margin-left: calc(#{$width} + #{$margin}) }
+  }
+}
+
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -#{$column-margin};
+  margin-right: -#{$column-margin};
+}
+
+[class*="col-"] {
+  width: calc(100% - #{$column-gap});
+  margin-left: #{$column-margin};
+  margin-right: #{$column-margin};
+}
+
+@include cols();
+
+@each $bp, $width in $breakpoints {
+  @media (min-width: #{$width}) {
+    @include cols($bp);
+  }
+}

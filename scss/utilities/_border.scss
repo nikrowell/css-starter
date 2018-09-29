@@ -1,0 +1,30 @@
+
+:root {
+  --border-width: 1px;
+  --border-radius: 5px;
+}
+
+.border {
+  border-style: solid;
+  border-width: var(--border-width);
+}
+.border-t {
+  border-top-style: solid;
+  border-top-width: var(--border-width);
+}
+.border-r {
+  border-right-style: solid;
+  border-right-width: var(--border-width);
+}
+.border-b {
+  border-bottom-style: solid;
+  border-bottom-width: var(--border-width);
+}
+.border-l {
+  border-left-style: solid;
+  border-left-width: var(--border-width);
+}
+
+.circle    { border-radius: 50% }
+.rounded   { border-radius: var(--border-radius) }
+.no-border { border: 0 }

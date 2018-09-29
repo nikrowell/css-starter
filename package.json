@@ -5,7 +5,8 @@
     "start": "run-p serve watch",
     "serve": "live-server --ignorePattern=\".css.map|.git/*|.sass-cache/*|scss/*\"",
     "watch": "node-sass --watch --source-map=true scss/index.scss build.css",
-    "build": "node-sass --output-style=compressed scss/index.scss build.min.css"
+    "build": "node-sass --output-style=compressed scss/index.scss build.min.css && npm run size",
+    "size": "echo $(gzip -c build.min.css | wc -c)"
   },
   "devDependencies": {
     "live-server": "^1.2.0",

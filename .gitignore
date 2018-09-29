@@ -4,3 +4,4 @@ _/
 *.css.map
 node_modules/
 build.css
+build.min.css

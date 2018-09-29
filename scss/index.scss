@@ -1,4 +1,27 @@
 
+$breakpoints: (
+  xs: 480px,
+  sm: 576px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1200px,
+);
+
+$colors: (
+  primary: #BADA55,
+  // primary-light
+  // primary-lighter
+  // primary-lightest
+  // primary-dark
+  // primary-darker
+  // primary-darkest
+  secondary: #C0FFEE,
+  red: #F00,
+  blue: #00F,
+  black: #151515,
+  white: #FFF,
+);
+
 @import
   'abstracts/variables',
   'abstracts/functions',
@@ -6,15 +29,16 @@
 
 @import
   'base/reset',
+  'base/print',
   'base/fonts',
   'base/elements',
+  'base/headings',
   'base/layout',
-  'base/columns',
-  'base/content';
+  'base/content',
+  'base/browsers';
 
 @import
   'components/buttons',
-  // 'components/card',
   'components/cta-link',
   // 'components/dropdown',
   // 'components/form-field',
@@ -25,25 +49,19 @@
   // 'components/form-radio',
   'components/nav',
   'components/page-header',
+  // 'components/pagination',
+  // 'components/share',
   'components/site-header',
   'components/site-footer',
   'components/social';
 
-  // article-head
-  // article-meta
-  // breadcrumb
-  // contact-cta
-  // forms
-  // hero
-  // home
-  // nav-archive
-  // nav-categories
-  // nav-posts
-  // nav-secondary
-  // pagination
-  // share
-
 @import
-  'base/print',
-  'base/utilities',
-  'base/overrides';
+  'utilities/border',
+  'utilities/color',
+  'utilities/columns',
+  'utilities/display',
+  'utilities/easing',
+  'utilities/flexbox',
+  'utilities/position',
+  'utilities/spacing',
+  'utilities/text';

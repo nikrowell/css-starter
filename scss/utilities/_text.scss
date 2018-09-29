@@ -1,0 +1,52 @@
+
+:root {
+  --text-base: 1rem;
+  --text-scale: 1.414; // http://type-scale.com/
+  --text-xs: calc(var(--text-base) * 0.75);
+  --text-sm: calc(var(--text-base) * 0.875);
+  --text-md: calc(var(--text-base) * var(--text-scale));
+  --text-lg: calc(var(--text-base) * var(--text-scale) * var(--text-scale));
+  --text-xl: calc(var(--text-base) * var(--text-scale) * var(--text-scale) * var(--text-scale));
+}
+
+.text-sm { font-size: var(--text-sm) }
+.text-md { font-size: var(--text-md) }
+.text-lg { font-size: var(--text-lg) }
+.text-xl { font-size: var(--text-xl) }
+
+.text-l { text-align: left }
+.text-r { text-align: right }
+.text-c { text-align: center }
+
+@each $bp, $width in $breakpoints {
+
+  @media (min-width: #{$width}) {
+
+    .#{$bp}\:text-sm { font-size: var(--text-xs) }
+    .#{$bp}\:text-sm { font-size: var(--text-sm) }
+    .#{$bp}\:text-md { font-size: var(--text-md) }
+    .#{$bp}\:text-lg { font-size: var(--text-lg) }
+    .#{$bp}\:text-xl { font-size: var(--text-xl) }
+
+    .#{$bp}\:text-l { text-align: left }
+    .#{$bp}\:text-c { text-align: center }
+    .#{$bp}\:text-r { text-align: right }
+  }
+}
+
+.light     { font-weight: 300 }
+.bold      { font-weight: 700 }
+.regular   { font-weight: 400 }
+.italic    { font-style: italic }
+.uppercase { text-transform: uppercase }
+.lowercase { text-transform: lowercase }
+
+.truncate {
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.no-select { user-select: none }
+.no-wrap   { white-space: nowrap }

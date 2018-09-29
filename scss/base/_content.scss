@@ -1,22 +1,10 @@
-
 .content {
 
   *:first-child { margin-top: 0; }
   *:last-child  { margin-bottom: 0; }
 
-  p + h1,
-  p + h2,
-  p + h3,
-  p + h4 {
-    margin-top: 0.5em;
-  }
-
   h2, h3 {
     margin-bottom: var(--space-xs);
-  }
-
-  a {
-    transition: color 0.125s;
   }
 
   ul, ol {

@@ -1,0 +1,36 @@
+
+:root {
+  --spacing-unit: 1em;
+  --spacing-scale: 1.5;
+  --spacing-1: calc(var(--spacing-unit) / var(--spacing-scale));
+  --spacing-2: calc(var(--spacing-unit) * var(--spacing-scale));
+  --spacing-3: calc(var(--spacing-unit) * var(--spacing-scale) * var(--spacing-scale));
+  --spacing-4: calc(var(--spacing-unit) * var(--spacing-scale) * var(--spacing-scale) * var(--spacing-scale));
+  --spacing-5: calc(var(--spacing-unit) * var(--spacing-scale) * var(--spacing-scale) * var(--spacing-scale) * var(--spacing-scale));
+}
+
+.m-auto { margin: auto }
+.mx-auto { margin-left: auto; margin-right: auto; }
+.my-auto { margin-top: auto; margin-bottom: auto; }
+
+@for $i from 0 through 5 {
+
+  $value: 0;
+  @if ($i != 0) { $value: var(--spacing-#{$i}); }
+
+  .m-#{$i}  { margin: $value }
+  .mt-#{$i} { margin-top: $value }
+  .mr-#{$i} { margin-right: $value }
+  .mb-#{$i} { margin-bottom: $value }
+  .ml-#{$i} { margin-left: $value }
+  .mx-#{$i} { margin-left: $value; margin-right: $value; }
+  .my-#{$i} { margin-top: $value; margin-bottom: $value; }
+
+  .p-#{$i}  { padding: $value }
+  .pt-#{$i} { padding-top: $value }
+  .pr-#{$i} { padding-right: $value }
+  .pb-#{$i} { padding-bottom: $value }
+  .pl-#{$i} { padding-left: $value }
+  .px-#{$i} { padding-left: $value; padding-right: $value; }
+  .py-#{$i} { padding-top: $value; padding-bottom: $value; }
+}

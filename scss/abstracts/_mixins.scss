@@ -29,18 +29,6 @@
   &:after { clear: both; }
 }
 
-@mixin cols($size: '', $count: $column-count, $gap: $column-gap, $margin: $column-margin) {
-  @for $i from 1 through $count {
-    $width: percentage($i / $count);
-    .col#{$size}-#{$i} {
-      width: calc(#{$width} - #{$gap});
-    }
-    .col#{$size}-offset-#{$i} {
-      margin-left: calc(#{$width} + #{$margin});
-    }
-  }
-}
-
 @mixin fill {
   content: '';
   position: absolute;

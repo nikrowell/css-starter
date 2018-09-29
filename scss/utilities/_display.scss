@@ -1,0 +1,49 @@
+
+.flex         { display: flex }
+.block        { display: block }
+.inline-block { display: inline-block }
+.inline-flex  { display: inline-flex }
+.inline       { display: inline }
+
+.hide  { display: none }
+.show  { display: inherit }
+
+.left  { float: left }
+.right { float: right }
+
+@each $bp, $width in $breakpoints {
+
+  @media (min-width: #{$width}) {
+
+    .#{$bp}\:flex         { display: flex }
+    .#{$bp}\:block        { display: block }
+    .#{$bp}\:inline-block { display: inline-block }
+    .#{$bp}\:hide         { display: none !important }
+    .#{$bp}\:show         { display: inherit !important }
+    .#{$bp}\:left         { float: left }
+    .#{$bp}\:right        { float: right }
+  }
+}
+
+.clearfix:before,
+.clearfix:after { content: ' '; display: table; }
+.clearfix:after { clear: both }
+
+.hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.scroll-x {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.scroll-y {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.no-overflow  { overflow: hidden }
