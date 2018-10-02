@@ -14,9 +14,9 @@
 .text-lg { font-size: var(--text-lg) }
 .text-xl { font-size: var(--text-xl) }
 
-.text-l { text-align: left }
-.text-r { text-align: right }
-.text-c { text-align: center }
+.text-left { text-align: left }
+.text-right { text-align: right }
+.text-center { text-align: center }
 
 @each $bp, $width in $breakpoints {
 
@@ -28,9 +28,9 @@
     .#{$bp}\:text-lg { font-size: var(--text-lg) }
     .#{$bp}\:text-xl { font-size: var(--text-xl) }
 
-    .#{$bp}\:text-l { text-align: left }
-    .#{$bp}\:text-c { text-align: center }
-    .#{$bp}\:text-r { text-align: right }
+    .#{$bp}\:text-left { text-align: left }
+    .#{$bp}\:text-right { text-align: right }
+    .#{$bp}\:text-center { text-align: center }
   }
 }
 

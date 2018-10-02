@@ -8,9 +8,6 @@
 .hide  { display: none }
 .show  { display: inherit }
 
-.left  { float: left }
-.right { float: right }
-
 @each $bp, $width in $breakpoints {
 
   @media (min-width: #{$width}) {
@@ -20,8 +17,6 @@
     .#{$bp}\:inline-block { display: inline-block }
     .#{$bp}\:hide         { display: none !important }
     .#{$bp}\:show         { display: inherit !important }
-    .#{$bp}\:left         { float: left }
-    .#{$bp}\:right        { float: right }
   }
 }
 

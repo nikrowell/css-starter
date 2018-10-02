@@ -75,7 +75,7 @@
   <style>
 
   .article {
-    max-width: 800px;
+    max-width: 840px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -118,21 +118,17 @@
 
   <nav class="nav">
     <ul class="nav__list">
+      <li class="nav__item"><a href="#">Home</a></li>
       <li class="nav__item"><a href="#">About</a></li>
       <li class="nav__item"><a href="#">Projects</a></li>
       <li class="nav__item"><a href="#">Contact</a></li>
-      <li class="nav__item"><a href="#">Adventure</a></li>
-      <li class="nav__item"><a href="#">Colorado</a></li>
-      <li class="nav__item"><a href="#">Minnesota</a></li>
-      <li class="nav__item"><a href="#">Hawaii</a></li>
-      <li class="nav__item"><a href="#">Costa Rica</a></li>
     </ul>
     <button class="nav__close js-toggle-nav">Close</button>
   </nav>
 
   <main class="site-main">
 
-    <article class="article">
+    <article class="container article">
 
       <header class="page-header">
         <h1 class="page-title">Lorem Ipsum Page Title</h1>
@@ -142,16 +138,16 @@
 
         <div class="flex-row justify-start items-center mb-2 px-2 relative" style="height:160px;background:#F1f1f1;">
           <span class="bg-black text-white">flex-row flex-x:start</span>
-          <span class="absolute pos-l pos-b fill-x text-c text-white bg-red py-1">centered</span>
+          <span class="absolute pos-left pos-bottom fill-x text-center text-white bg-red py-1">centered</span>
         </div>
-        <div class="text-red md:text-blue border rounded border-red flex-column flex-x:end flex-y:center" style="height:120px;background:#F1f1f1;padding:1em;">
-          flex-column flex-x:end
+        <div class="text-red md:text-blue border rounded border-red flex-row justify-end items-end" style="height:120px;background:#F1f1f1;padding:1em;">
+          this is a tester
         </div>
 
         <div class="columns my-5">
           <div class="col-6 lg:col-2 border border-blue">col</div>
           <div class="col-3 lg:col-5 border border-red uppercase bold">col</div>
-          <div class="col-3 lg:col-5 border border-red lg:text-r italic">col</div>
+          <div class="col-3 lg:col-5 border border-red lg:text-right italic">col</div>
         </div>
 
         <p class="lead">Sed autem necessitatibus quibusdam rerum suscipit aspernatur. Aut voluptatem animi rerum vero et et. Explicabo vel pariatur dolorem voluptas blanditiis quia magni eos. Ab temporibus nam tempora.</p>

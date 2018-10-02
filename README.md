@@ -19,9 +19,8 @@ index.html file with commonly used `<head>` meta tags.
 
 #### abstracts
 #### base
-#### components (OOCSS and BEM)
-
-## Containers vs Sections
+#### components (BEM)
+#### utilities
 
 ## Development and Hacking
 
