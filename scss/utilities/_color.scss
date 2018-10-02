@@ -4,14 +4,3 @@
   .border-#{$name} { border-color: #{$color} }
   .text-#{$name}   { color: #{$color} }
 }
-
-@each $bp, $width in $breakpoints {
-
-  @media (min-width: #{$width}) {
-    @each $name, $color in $colors {
-      .#{$bp}\:bg-#{$name}     { background-color: #{$color} }
-      .#{$bp}\:border-#{$name} { border-color: #{$color} }
-      .#{$bp}\:text-#{$name}   { color: #{$color} }
-    }
-  }
-}

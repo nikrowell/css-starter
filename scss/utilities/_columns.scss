@@ -5,12 +5,11 @@ $column-margin: $column-gap / 2;
 
 @mixin cols($bp: '', $count: $column-count, $gap: $column-gap, $margin: $column-margin) {
 
+  $prefix: '';
+  @if ($bp != '') { $prefix: '#{$bp}\\:'; }
+
   @for $i from 1 through $count {
-
     $width: percentage($i / $count);
-    $prefix: '';
-    @if ($bp != '') { $prefix: '#{$bp}\\:'; }
-
     .#{$prefix}col-#{$i}        { width: calc(#{$width} - #{$gap}) }
     .#{$prefix}col-offset-#{$i} { margin-left: calc(#{$width} + #{$margin}) }
   }
