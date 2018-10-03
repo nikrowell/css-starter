@@ -1,5 +1,6 @@
 
 :root {
+  // http://type-scale.com/
   --spacing-unit: 1em;
   --spacing-scale: 1.5;
   --spacing-1: calc(var(--spacing-unit) / var(--spacing-scale));
@@ -9,7 +10,7 @@
   --spacing-5: calc(var(--spacing-unit) * var(--spacing-scale) * var(--spacing-scale) * var(--spacing-scale) * var(--spacing-scale));
 }
 
-.m-auto { margin: auto }
+.m-auto  { margin: auto }
 .mx-auto { margin-left: auto; margin-right: auto; }
 .my-auto { margin-top: auto; margin-bottom: auto; }
 

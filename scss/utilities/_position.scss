@@ -4,10 +4,10 @@
 .absolute { position: absolute }
 .fixed    { position: fixed }
 
-.pos-top { top: 0 }
-.pos-right { right: 0 }
+.pos-top    { top: 0 }
+.pos-right  { right: 0 }
 .pos-bottom { bottom: 0 }
-.pos-left { left: 0 }
+.pos-left   { left: 0 }
 
 @each $bp, $width in $breakpoints {
 
@@ -18,10 +18,10 @@
     .#{$bp}\:absolute { position: absolute }
     .#{$bp}\:fixed    { position: fixed }
 
-    .#{$bp}\:pos-top { top: 0; bottom: auto; }
-    .#{$bp}\:pos-right { right: 0; left: auto; }
+    .#{$bp}\:pos-top    { top: 0; bottom: auto; }
+    .#{$bp}\:pos-right  { right: 0; left: auto; }
     .#{$bp}\:pos-bottom { bottom: 0; top: auto; }
-    .#{$bp}\:pos-left { left: 0; right: auto; }
+    .#{$bp}\:pos-left   { left: 0; right: auto; }
   }
 }
 

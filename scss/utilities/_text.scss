@@ -1,7 +1,8 @@
 
 :root {
+  // http://type-scale.com/
   --text-base: 1rem;
-  --text-scale: 1.414; // http://type-scale.com/
+  --text-scale: 1.414;
   --text-xs: calc(var(--text-base) * 0.75);
   --text-sm: calc(var(--text-base) * 0.875);
   --text-md: calc(var(--text-base) * var(--text-scale));
@@ -14,8 +15,8 @@
 .text-lg { font-size: var(--text-lg) }
 .text-xl { font-size: var(--text-xl) }
 
-.text-left { text-align: left }
-.text-right { text-align: right }
+.text-left   { text-align: left }
+.text-right  { text-align: right }
 .text-center { text-align: center }
 
 @each $bp, $width in $breakpoints {
@@ -28,8 +29,8 @@
     .#{$bp}\:text-lg { font-size: var(--text-lg) }
     .#{$bp}\:text-xl { font-size: var(--text-xl) }
 
-    .#{$bp}\:text-left { text-align: left }
-    .#{$bp}\:text-right { text-align: right }
+    .#{$bp}\:text-left   { text-align: left }
+    .#{$bp}\:text-right  { text-align: right }
     .#{$bp}\:text-center { text-align: center }
   }
 }
