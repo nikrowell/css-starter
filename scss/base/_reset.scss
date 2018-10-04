@@ -24,11 +24,29 @@ img, video, object, embed
 template, [hidden]
 { display: none !important; }
 
-input[type="search"] {
-  -webkit-appearance: textfield;
-  &::-webkit-search-decoration,
-  &::-webkit-search-cancel-button { -webkit-appearance: none; }
+textarea {
+  overflow: auto;
+  resize: vertical;
 }
+strong, b {
+  font-weight: bold;
+  line-height: inherit;
+}
+em, i {
+  font-style: italic;
+  line-height: inherit;
+}
+small {
+  font-size: 80%;
+}
+hr {
+  clear: both;
+  width: 100%;
+  height: 1px;
+  line-height: 0;
+  border: none;
+}
+
 input:not([type="checkbox"]),
 input:not([type="radio"]),
 textarea,
@@ -38,6 +56,16 @@ button {
   font-family: inherit;
   font-weight: inherit;
   outline: none;
+  &::placeholder,
+  &::placeholder {
+    color: inherit;
+    opacity: .5;
+  }
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button { -webkit-appearance: none; }
 }
 button {
   border: 0;
@@ -48,8 +76,4 @@ button::-moz-focus-inner,
 input::-moz-focus-inner {
   padding: 0;
   border: 0;
-}
-textarea {
-  overflow: auto;
-  resize: vertical;
 }

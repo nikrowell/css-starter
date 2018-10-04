@@ -5,6 +5,7 @@
 .show         { display: inherit }
 .left         { float: left; }
 .right        { float: right; }
+.valign       { vertical-align: middle }
 
 @each $bp, $width in $breakpoints {
 
@@ -19,9 +20,16 @@
   }
 }
 
-.clearfix:before,
-.clearfix:after { content: ' '; display: table; }
-.clearfix:after { clear: both }
+// .clearfix:before,
+// .clearfix:after { content: ' '; display: table; }
+// .clearfix:after { clear: both }
+
+// TODO: make sure this is sufficient and delete the above version
+.clearfix:after {
+  content: '';
+  display: table;
+  clear: both;
+}
 
 .hidden {
   position: absolute !important;
@@ -31,13 +39,22 @@
   clip: rect(1px, 1px, 1px, 1px);
 }
 
+// .opacity-0   { opacity: 0 }
+// .opacity-25  { opacity: .25 }
+// .opacity-50  { opacity: .5 }
+// .opacity-75  { opacity: .75 }
+// .opacity-100 { opacity: 1 }
+
 .scroll-x {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 .scroll-y {
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
+.no-pointer-events { pointer-events: none }
 .no-overflow  { overflow: hidden }

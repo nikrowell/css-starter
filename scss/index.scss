@@ -1,12 +1,4 @@
 
-$breakpoints: (
-  xs: 480px,
-  sm: 576px,
-  md: 768px,
-  lg: 1024px,
-  xl: 1200px,
-);
-
 $colors: (
   primary: #BADA55,
   // primary-light
@@ -20,6 +12,14 @@ $colors: (
   blue: #00F,
   black: #151515,
   white: #FFF,
+);
+
+$breakpoints: (
+  xs: 480px,
+  sm: 576px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1200px,
 );
 
 @import
@@ -63,5 +63,6 @@ $colors: (
   'utilities/easing',
   'utilities/flexbox',
   'utilities/position',
+  'utilities/sizing',
   'utilities/spacing',
   'utilities/text';

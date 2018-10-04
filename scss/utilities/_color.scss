@@ -1,6 +1,11 @@
 
 @each $name, $color in $colors {
+
   .bg-#{$name}     { background-color: #{$color} }
   .border-#{$name} { border-color: #{$color} }
   .text-#{$name}   { color: #{$color} }
+
+  .hover\:bg-#{$name}:hover     { background-color: #{$color} }
+  .hover\:border-#{$name}:hover { border-color: #{$color} }
+  .hover\:text-#{$name}:hover   { color: #{$color} }
 }

@@ -17,7 +17,7 @@
 @mixin spacing($bp: '') {
 
   $prefix: '';
-  @if ($bp != '') { $prefix: '#{$bp}\\:'; }
+  @if ($bp != '') { $prefix: '#{$bp}\:'; }
 
   @for $i from 0 through 5 {
 
