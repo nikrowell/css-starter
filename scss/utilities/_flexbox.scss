@@ -70,9 +70,11 @@
   }
 }
 
-.flex-wrap { flex-wrap: wrap }
-.flex-auto { flex: 1 1 auto }
-.flex-none { flex: none }
+.flex-none    { flex: none }
+.flex-auto    { flex: auto }
+.flex-wrap    { flex-wrap: wrap }
+.flex-grow    { flex-grow: 1 }
+.flex-shrink  { flex-shrink: 1 }
 
 .order-0     { order: 0 }
 .order-1     { order: 1 }
