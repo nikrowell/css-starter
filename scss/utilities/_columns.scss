@@ -1,9 +1,9 @@
 
-$column-count: 12;
-$column-gap: 20px;
-$column-margin: $column-gap / 2;
+$col-count: 12;
+$col-gap: 20px;
+$col-margin: $col-gap / 2;
 
-@mixin cols($bp: '', $count: $column-count, $gap: $column-gap, $margin: $column-margin) {
+@mixin cols($bp: '', $count: $col-count, $gap: $col-gap, $margin: $col-margin) {
 
   $prefix: '';
   @if ($bp != '') { $prefix: '#{$bp}\\:'; }
@@ -18,14 +18,14 @@ $column-margin: $column-gap / 2;
 .columns {
   display: flex;
   flex-wrap: wrap;
-  margin-left: -#{$column-margin};
-  margin-right: -#{$column-margin};
+  margin-left: -#{$col-margin};
+  margin-right: -#{$col-margin};
 }
 
 [class*="col-"] {
-  width: calc(100% - #{$column-gap});
-  margin-left: #{$column-margin};
-  margin-right: #{$column-margin};
+  width: calc(100% - #{$col-gap});
+  margin-left: #{$col-margin};
+  margin-right: #{$col-margin};
 }
 
 @include cols();

@@ -16,28 +16,28 @@
 @mixin spacing($bp: '') {
 
   $prefix: '';
-  @if ($bp != '') { $prefix: '#{$bp}\:'; }
+  @if ($bp != '') { $prefix: '#{$bp}\\:'; }
 
   @for $i from 0 through 5 {
 
     $value: 0;
     @if ($i != 0) { $value: var(--spacing-#{$i}); }
 
-    .m-#{$i}  { margin: $value }
-    .mt-#{$i} { margin-top: $value }
-    .mr-#{$i} { margin-right: $value }
-    .mb-#{$i} { margin-bottom: $value }
-    .ml-#{$i} { margin-left: $value }
-    .mx-#{$i} { margin-left: $value; margin-right: $value; }
-    .my-#{$i} { margin-top: $value; margin-bottom: $value; }
+    .#{$prefix}m-#{$i}  { margin: $value }
+    .#{$prefix}mt-#{$i} { margin-top: $value }
+    .#{$prefix}mr-#{$i} { margin-right: $value }
+    .#{$prefix}mb-#{$i} { margin-bottom: $value }
+    .#{$prefix}ml-#{$i} { margin-left: $value }
+    .#{$prefix}mx-#{$i} { margin-left: $value; margin-right: $value; }
+    .#{$prefix}my-#{$i} { margin-top: $value; margin-bottom: $value; }
 
-    .p-#{$i}  { padding: $value }
-    .pt-#{$i} { padding-top: $value }
-    .pr-#{$i} { padding-right: $value }
-    .pb-#{$i} { padding-bottom: $value }
-    .pl-#{$i} { padding-left: $value }
-    .px-#{$i} { padding-left: $value; padding-right: $value; }
-    .py-#{$i} { padding-top: $value; padding-bottom: $value; }
+    .#{$prefix}p-#{$i}  { padding: $value }
+    .#{$prefix}pt-#{$i} { padding-top: $value }
+    .#{$prefix}pr-#{$i} { padding-right: $value }
+    .#{$prefix}pb-#{$i} { padding-bottom: $value }
+    .#{$prefix}pl-#{$i} { padding-left: $value }
+    .#{$prefix}px-#{$i} { padding-left: $value; padding-right: $value; }
+    .#{$prefix}py-#{$i} { padding-top: $value; padding-bottom: $value; }
   }
 }
 
