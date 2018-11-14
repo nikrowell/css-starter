@@ -41,17 +41,18 @@
 @mixin fluid($property, $map) {
 
   $length: length(map-keys($map));
-  @if($length < 2) { @error 'fluid() $map requires at least 2 values' }
-
   $map: map-sort($map);
   $keys: map-keys($map);
+
   #{$property}: map-get($map, nth($keys,1));
 
   @for $i from 1 through ($length - 1) {
 
     @media (min-width:nth($keys,$i)) {
+
       $value1: map-get($map, nth($keys,$i));
       $value2: map-get($map, nth($keys,($i + 1)));
+
       @if ($value1 != $value2) {
         #{$property}: linear-interpolation((nth($keys,$i): $value1, nth($keys,($i+1)): $value2));
       } @else {
@@ -62,6 +63,26 @@
 
   @media (min-width:nth($keys,$length)) {
     #{$property}: map-get($map, nth($keys,$length));
+  }
+}
+
+@mixin font-size($min-vw, $max-vw, $min-font-size, $max-font-size) {
+
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-font-size);
+  $u4: unit($max-font-size);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      font-size: $min-font-size;
+      @media screen and (min-width: $min-vw) {
+        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+      @media screen and (min-width: $max-vw) {
+        font-size: $max-font-size;
+      }
+    }
   }
 }
 

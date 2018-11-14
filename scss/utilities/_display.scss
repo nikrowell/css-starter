@@ -3,9 +3,8 @@
 .inline-block { display: inline-block }
 .hide         { display: none }
 .show         { display: inherit }
-.left         { float: left; }
-.right        { float: right; }
-.valign       { vertical-align: middle }
+.left         { float: left }
+.right        { float: right }
 
 @each $bp, $width in $breakpoints {
 
@@ -13,10 +12,10 @@
 
     .#{$bp}\:block        { display: block }
     .#{$bp}\:inline-block { display: inline-block }
-    .#{$bp}\:hide         { display: none !important }
-    .#{$bp}\:show         { display: inherit !important }
-    .#{$bp}\:left         { float: left; }
-    .#{$bp}\:right        { float: right; }
+    .#{$bp}\:hide         { display: none }
+    .#{$bp}\:show         { display: inherit }
+    .#{$bp}\:left         { float: left }
+    .#{$bp}\:right        { float: right }
   }
 }
 
@@ -27,11 +26,11 @@
 }
 
 .hidden {
-  position: absolute !important;
+  position: absolute;
   height: 1px;
   width: 1px;
-  overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
 }
 
 .scroll-x {
@@ -45,5 +44,5 @@
   -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
-.no-pointer-events { pointer-events: none }
+.no-pointer   { pointer-events: none }
 .no-overflow  { overflow: hidden }

@@ -2,6 +2,35 @@
 $font-primary: 'Open Sans', sans-serif;
 $font-secondary: 'PT Serif', serif;
 
+$colors: (
+  primary: #BADA55,
+  // primary-light
+  // primary-lighter
+  // primary-lightest
+  // primary-dark
+  // primary-darker
+  // primary-darkest
+  secondary: #C0FFEE,
+  red: #F00,
+  blue: #00F,
+  black: #151515,
+  white: #FFF,
+);
+
+$breakpoints: (
+  xs: 480px,
+  sm: 576px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1200px,
+);
+
+// $xs: map-get($breakpoints, 'xs');
+$sm: map-get($breakpoints, 'sm');
+$md: map-get($breakpoints, 'md');
+$lg: map-get($breakpoints, 'lg');
+$xl: map-get($breakpoints, 'xl');
+
 $color-primary: #F00;
 $color-primary-dark: darken($color-primary, 20);
 $color-primary-light: lighten($color-primary, 20);
@@ -18,9 +47,9 @@ $color-text-light: #666;
 $color-line: rgba($color-text,0.25);
 $color-link: $color-primary;
 $color-link-hover: $color-primary-light;
-$color-error: #f5414f;
-$color-success: #88c459;
-$color-warning: #ffd137;
+// $color-error: #f5414f;
+// $color-success: #88c459;
+// $color-warning: #ffd137;
 
 $container-width: 1200px;
 $container-padding: 20px;
@@ -49,6 +78,10 @@ $section-padding: 5rem;
   --space-xl:  calc(var(--space-unit) * 3.25); // 52
   --space-xxl: calc(var(--space-unit) * 5.25); // 84
 
+  --container-width: #{$container-width};
+  --container-padding: #{$container-padding};
+  --section-padding: #{$section-padding};
+
   @media (min-width: 480px) {
     --text-scale: 1.414;
   }
@@ -60,8 +93,4 @@ $section-padding: 5rem;
   @media (min-width: 1024px) {
     --font-size: 1.125em;
   }
-
-  --container-width: #{$container-width};
-  --container-padding: #{$container-padding};
-  --section-padding: #{$section-padding};
 }

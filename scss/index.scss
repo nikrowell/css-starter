@@ -1,27 +1,4 @@
 
-$colors: (
-  primary: #BADA55,
-  // primary-light
-  // primary-lighter
-  // primary-lightest
-  // primary-dark
-  // primary-darker
-  // primary-darkest
-  secondary: #C0FFEE,
-  red: #F00,
-  blue: #00F,
-  black: #151515,
-  white: #FFF,
-);
-
-$breakpoints: (
-  xs: 480px,
-  sm: 576px,
-  md: 768px,
-  lg: 1024px,
-  xl: 1200px,
-);
-
 @import
   'abstracts/variables',
   'abstracts/functions',
