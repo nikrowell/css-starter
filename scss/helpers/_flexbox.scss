@@ -1,0 +1,60 @@
+
+@mixin flexbox($prefix: '') {
+
+  @if ($prefix != '') {
+    $prefix: '#{$prefix}\\:';
+  }
+
+  .#{$prefix}flex-row         { display: flex; flex-direction: row; }
+  .#{$prefix}flex-row-reverse { flex-direction: row-reverse }
+  .#{$prefix}flex-col         { display: flex; flex-direction: column; }
+  .#{$prefix}flex-col-reverse { flex-direction: column-reverse }
+
+  .#{$prefix}justify-start   { justify-content: flex-start }
+  .#{$prefix}justify-end     { justify-content: flex-end }
+  .#{$prefix}justify-center  { justify-content: center }
+  .#{$prefix}justify-between { justify-content: space-between }
+  .#{$prefix}justify-around  { justify-content: space-around }
+  .#{$prefix}justify-evenly  { justify-content: space-evenly }
+
+  .#{$prefix}items-start     { align-items: flex-start }
+  .#{$prefix}items-end       { align-items: flex-end }
+  .#{$prefix}items-center    { align-items: center }
+  .#{$prefix}items-stretch   { align-items: stretch }
+
+  .#{$prefix}self-start      { align-self: flex-start }
+  .#{$prefix}self-end        { align-self: flex-end }
+  .#{$prefix}self-center     { align-self: center }
+  .#{$prefix}self-stretch    { align-self: stretch }
+
+  .#{$prefix}content-start   { align-content: flex-start }
+  .#{$prefix}content-end     { align-content: flex-end }
+  .#{$prefix}content-center  { align-content: center }
+  .#{$prefix}content-stretch { align-content: stretch }
+  .#{$prefix}content-between { align-content: space-between }
+  .#{$prefix}content-around  { align-content: space-around }
+  .#{$prefix}content-evenly  { align-content: space-evenly }
+}
+
+@include flexbox();
+
+@each $prefix, $query in $breakpoints {
+  @media ($query) {
+    @include flexbox($prefix);
+  }
+}
+
+.flex-none    { flex: none }
+.flex-auto    { flex: 1 1 auto }
+.flex-wrap    { flex-wrap: wrap }
+.flex-grow    { flex-grow: 1 }
+.flex-shrink  { flex-shrink: 1 }
+
+.order-0     { order: 0 }
+.order-1     { order: 1 }
+.order-2     { order: 2 }
+.order-3     { order: 3 }
+.order-4     { order: 4 }
+.order-5     { order: 5 }
+.order-first { order: -1 }
+.order-last  { order: 9999 }

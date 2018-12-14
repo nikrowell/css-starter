@@ -1,10 +1,4 @@
 
-@mixin bg-cover {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 @mixin center {
   position: absolute;
   left: 50%;
@@ -121,6 +115,25 @@
     left: 0;
     right: 0;
     bottom: 0;
+  }
+}
+
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white, 50%)) {
+
+  ::-webkit-scrollbar {
+      width:  $size;
+      height: $size;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: $foreground-color;
+  }
+  ::-webkit-scrollbar-track {
+    background: $background-color;
+  }
+
+  body { // IE
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
   }
 }
 

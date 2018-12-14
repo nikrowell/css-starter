@@ -3,18 +3,18 @@
   display: inline-flex;
   position: relative;
   margin: 0;
-  padding: var(--space-sm) var(--space-md);
+  padding: 0.625em 1.5em;
   font-size: 1rem;
-  font-family: $font-primary;
+  font-family: $font-heading;
   line-height: 1;
-  color: #FFF;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  white-space: nowrap;
+  color: #FFF;
   background-color: $color-primary;
   border-radius: 5px;
   border: 0;
+  white-space: nowrap;
   outline: none;
   cursor: pointer;
   transition: .2s;
@@ -22,13 +22,11 @@
   -moz-appearance: none;
   appearance: none;
 }
-
 .btn:hover {
   color: #FFF;
   background-color: #555;
   text-decoration: none;
 }
-
 .btn[disabled] {
   pointer-events: none;
   cursor: not-allowed;

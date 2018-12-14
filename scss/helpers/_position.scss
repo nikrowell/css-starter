@@ -1,0 +1,54 @@
+
+.static   { position: static }
+.relative { position: relative }
+.absolute { position: absolute }
+.sticky   { position: sticky }
+.fixed    { position: fixed }
+
+.pos-top    { top: 0 }
+.pos-right  { right: 0 }
+.pos-bottom { bottom: 0 }
+.pos-left   { left: 0 }
+
+@each $prefix, $query in $breakpoints {
+
+  @media ($query) {
+
+    .#{$prefix}\:static   { position: static }
+    .#{$prefix}\:relative { position: relative }
+    .#{$prefix}\:absolute { position: absolute }
+    .#{$prefix}\:sticky   { position: sticky }
+    .#{$prefix}\:fixed    { position: fixed }
+
+    .#{$prefix}\:pos-top    { top: 0; bottom: auto; }
+    .#{$prefix}\:pos-right  { right: 0; left: auto; }
+    .#{$prefix}\:pos-bottom { bottom: 0; top: auto; }
+    .#{$prefix}\:pos-left   { left: 0; right: auto; }
+  }
+}
+
+.center {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+.center-x {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.center-y {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.z-0  { z-index: 0 }
+.z-1  { z-index: 10 }
+.z-2  { z-index: 20 }
+.z-3  { z-index: 30 }
+.z-4  { z-index: 40 }
+.z-5  { z-index: 50 }
+.z-6  { z-index: 60 }
+.z-7  { z-index: 70 }
+.z-8  { z-index: 80 }
+.z-9  { z-index: 90 }
+.z-10 { z-index: 1000 }

@@ -1,28 +1,22 @@
 
 .block        { display: block }
+.flex         { display: flex }
 .inline-block { display: inline-block }
+.inline-flex  { display: inline-flex }
 .hide         { display: none }
 .show         { display: inherit }
-.left         { float: left }
-.right        { float: right }
 
-@each $bp, $width in $breakpoints {
+@each $prefix, $query in $breakpoints {
 
-  @media (min-width: #{$width}) {
+  @media ($query) {
 
-    .#{$bp}\:block        { display: block }
-    .#{$bp}\:inline-block { display: inline-block }
-    .#{$bp}\:hide         { display: none }
-    .#{$bp}\:show         { display: inherit }
-    .#{$bp}\:left         { float: left }
-    .#{$bp}\:right        { float: right }
+    .#{$prefix}\:block        { display: block }
+    .#{$prefix}\:flex         { display: flex }
+    .#{$prefix}\:inline-block { display: inline-block }
+    .#{$prefix}\:inline-flex  { display: inline-flex }
+    .#{$prefix}\:hide         { display: none }
+    .#{$prefix}\:show         { display: inherit }
   }
-}
-
-.clearfix:after {
-  content: '';
-  display: table;
-  clear: both;
 }
 
 .hidden {
@@ -44,5 +38,5 @@
   -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
-.no-pointer   { pointer-events: none }
 .no-overflow  { overflow: hidden }
+.no-pointer   { pointer-events: none }

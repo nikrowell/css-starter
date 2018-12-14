@@ -1,80 +1,35 @@
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-  scroll-behavior: inherit;
-}
-
-html {
-  height: 100%;
-  line-height: 1.15;
+*, *:before, *:after {
   box-sizing: border-box;
+}
+html {
   scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: transparent;
   -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
-{ margin: 0; padding: 0; border: 0; vertical-align: baseline; }
-
-article, aside, audio, canvas, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary, video
-{ display: block; }
-
-img, video, object, embed
-{ width: auto; max-width: 100%; vertical-align: middle; }
-
-template, [hidden]
-{ display: none !important; }
-
-textarea {
-  overflow: auto;
-  resize: vertical;
+body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, p {
+  margin: 0;
+  padding: 0;
 }
-strong, b {
-  font-weight: bold;
-  line-height: inherit;
+article, aside, audio, canvas, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary, video {
+  display: block;
 }
-em, i {
-  font-style: italic;
-  line-height: inherit;
+img, embed, iframe, object, audio, video {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  border: 0;
 }
-small {
-  font-size: 80%;
-}
-hr {
-  clear: both;
-  width: 100%;
-  height: 1px;
-  line-height: 0;
-  border: none;
-}
-
-input:not([type="checkbox"]),
-input:not([type="radio"]),
-textarea,
-select,
-button {
+button, input, select, textarea {
+  margin: 0;
   font-size: inherit;
   font-family: inherit;
-  font-weight: inherit;
-  outline: none;
-  &::placeholder,
-  &::placeholder {
-    color: inherit;
-    opacity: .5;
-  }
 }
-input[type="search"] {
-  -webkit-appearance: textfield;
-  &::-webkit-search-decoration,
-  &::-webkit-search-cancel-button { -webkit-appearance: none; }
+ol, ul {
+  list-style: none;
 }
-button {
-  border: 0;
-  cursor: pointer;
-  -webkit-appearance: button;
-}
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-  padding: 0;
-  border: 0;
+template, [hidden] {
+  display: none !important;
 }

@@ -3,10 +3,11 @@ $col-count: 12;
 $col-gap: 20px;
 $col-margin: $col-gap / 2;
 
-@mixin cols($bp: '', $count: $col-count, $gap: $col-gap, $margin: $col-margin) {
+@mixin cols($prefix: '', $count: $col-count, $gap: $col-gap, $margin: $col-margin) {
 
-  $prefix: '';
-  @if ($bp != '') { $prefix: '#{$bp}\\:'; }
+  @if ($prefix != '') {
+    $prefix: '#{$prefix}\\:';
+  }
 
   @for $i from 1 through $count {
     $width: percentage($i / $count);
@@ -30,8 +31,8 @@ $col-margin: $col-gap / 2;
 
 @include cols();
 
-@each $bp, $width in $breakpoints {
-  @media (min-width: #{$width}) {
-    @include cols($bp);
+@each $prefix, $query in $breakpoints {
+  @media ($query) {
+    @include cols($prefix);
   }
 }

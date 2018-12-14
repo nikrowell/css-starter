@@ -4,7 +4,8 @@
   *:last-child  { margin-bottom: 0; }
 
   h2, h3 {
-    margin-bottom: var(--space-xs);
+    margin-bottom: 1em;
+    margin-bottom: var(--spacing-1);
   }
 
   ul, ol {

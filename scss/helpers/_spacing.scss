@@ -9,14 +9,11 @@
   --spacing-5: calc(var(--spacing-unit) * var(--spacing-scale) * var(--spacing-scale) * var(--spacing-scale) * var(--spacing-scale));
 }
 
-.m-auto  { margin: auto }
-.mx-auto { margin-left: auto; margin-right: auto; }
-.my-auto { margin-top: auto; margin-bottom: auto; }
+@mixin spacing($prefix: '') {
 
-@mixin spacing($bp: '') {
-
-  $prefix: '';
-  @if ($bp != '') { $prefix: '#{$bp}\\:'; }
+  @if ($prefix != '') {
+    $prefix: '#{$prefix}\\:';
+  }
 
   @for $i from 0 through 5 {
 
@@ -43,8 +40,20 @@
 
 @include spacing();
 
-@each $bp, $width in $breakpoints {
-  @media (min-width: #{$width}) {
-    @include spacing($bp);
+@each $prefix, $query in $breakpoints {
+  @media ($query) {
+    @include spacing($prefix);
   }
+}
+
+.m-auto  {
+  margin: auto
+}
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
 }

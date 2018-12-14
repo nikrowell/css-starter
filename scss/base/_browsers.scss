@@ -1,10 +1,10 @@
 
-@supports not (display: grid) {
-  // CSS grid not supported
-}
-
 @supports not (--a: 0) {
   // CSS custom properties not supported
+}
+
+@supports not (display: grid) {
+  // CSS grid not supported
 }
 
 .msie {
