@@ -1,13 +1,13 @@
+
 .site-header {
-  padding-top: var(--space-md);
-  padding-bottom: var(--space-md);
   color: #FFF;
   background:#335;
 }
 
 .logo {
-  width: 180px;
-  @include ratio(300, 150);
+  width: 40%;
+  max-width: 180px;
+  @include ratio(320, 125);
 }
 .logo a {
   background-color: #F00;

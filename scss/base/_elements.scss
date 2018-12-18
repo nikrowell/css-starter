@@ -8,7 +8,6 @@ body {
 
 p {
   margin-bottom: 1.5em;
-  margin-bottom: var(--spacing-2);
 }
 p:last-child {
   margin-bottom: 0;
@@ -42,7 +41,7 @@ hr {
   width: 100%;
   height: 1px;
   margin: 2.5em 0;
-  margin: var(--spacing-3) 0;
+  margin: var(--space-3) 0;
   line-height: 0;
   border: none;
   background-color: $color-line;

@@ -3,6 +3,12 @@ $col-count: 12;
 $col-gap: 20px;
 $col-margin: $col-gap / 2;
 
+// TODO: allow for responsive col spacing via custom properties?
+// :root {
+//   --col-gap: $col-gap,
+//   --col-margin: $col-margin,
+// }
+
 @mixin cols($prefix: '', $count: $col-count, $gap: $col-gap, $margin: $col-margin) {
 
   @if ($prefix != '') {

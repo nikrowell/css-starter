@@ -1,12 +1,8 @@
 
 .nav-toggle {
   @include center-y;
-  right: var(--container-padding);
+  right: $container-padding;
 }
-
-// .nav-active .site {
-//   overflow: hidden;
-// }
 
 .nav {
   position: fixed;
@@ -25,12 +21,4 @@
   transition: transform 0.4s cubic-bezier(0.23,1,0.32,1);
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
-}
-.nav__item a {
-  font-size: var(--text-xl);
-}
-.nav__close {
-  position: absolute;
-  top: 50px;
-  right: var(--space-xl);
 }

@@ -1,5 +1,5 @@
 
-@mixin widths($prefix: '') {
+@mixin sizing($prefix: '') {
 
   @if ($prefix != '') {
     $prefix: '#{$prefix}\\:';
@@ -25,11 +25,11 @@
   .#{$prefix}vh-100     { height: 100vh }
 }
 
-@include widths();
+@include sizing();
 
 @each $prefix, $query in $breakpoints {
   @media ($query) {
-    @include widths($prefix);
+    @include sizing($prefix);
   }
 }
 
