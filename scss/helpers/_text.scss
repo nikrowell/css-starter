@@ -1,12 +1,16 @@
 
 :root {
+
+  // http://type-scale.com/
   --text-base: 1rem;
   --text-scale: 1.414;
-  --text-xs: calc(var(--text-base) * 0.75);
-  --text-sm: calc(var(--text-base) * 0.875);
-  --text-md: calc(var(--text-base) * var(--text-scale));
-  --text-lg: calc(var(--text-base) * var(--text-scale) * var(--text-scale));
-  --text-xl: calc(var(--text-base) * var(--text-scale) * var(--text-scale) * var(--text-scale));
+
+  --text-xs: calc(1rem / var(--text-scale) / var(--text-scale));
+  --text-sm: calc(1rem / var(--text-scale));
+  --text-md: calc(1rem * var(--text-scale));
+  --text-lg: calc(1rem * var(--text-scale) * var(--text-scale));
+  --text-xl: calc(1rem * var(--text-scale) * var(--text-scale) * var(--text-scale));
+  --text-xxl: calc(1rem * var(--text-scale) * var(--text-scale) * var(--text-scale) * var(--text-scale));
 }
 
 @mixin text($prefix: '') {
@@ -15,11 +19,12 @@
     $prefix: '#{$prefix}\\:';
   }
 
-  .#{$prefix}text-xs { font-size: var(--text-xs) }
-  .#{$prefix}text-sm { font-size: var(--text-sm) }
-  .#{$prefix}text-md { font-size: var(--text-md) }
-  .#{$prefix}text-lg { font-size: var(--text-lg) }
-  .#{$prefix}text-xl { font-size: var(--text-xl) }
+  .#{$prefix}text-xs  { font-size: var(--text-xs) }
+  .#{$prefix}text-sm  { font-size: var(--text-sm) }
+  .#{$prefix}text-md  { font-size: var(--text-md) }
+  .#{$prefix}text-lg  { font-size: var(--text-lg) }
+  .#{$prefix}text-xl  { font-size: var(--text-xl) }
+  .#{$prefix}text-xxl { font-size: var(--text-xxl) }
 
   .#{$prefix}text-left   { text-align: left }
   .#{$prefix}text-right  { text-align: right }
@@ -47,23 +52,20 @@
 .font-black     { font-weight: 900 }
 .font-italic    { font-style: italic }
 
-// .kerning-tight  { letter-spacing: -0.05em }
-// .kerning-normal { letter-spacing: 0 }
-// .kerning-loose  { letter-spacing: 0.05em }
+.kerning-tight  { letter-spacing: -0.05em }
+.kerning-normal { letter-spacing: 0 }
+.kerning-loose  { letter-spacing: 0.05em }
 
-// .leading-none   { line-height: 1 }
-// .leading-tight  { line-height: 1.25 }
-// .leading-normal { line-height: 1.5 }
-// .leading-loose  { line-height: 2 }
+.leading-none   { line-height: 1 }
+.leading-tight  { line-height: 1.25 }
+.leading-normal { line-height: 1.5 }
+.leading-loose  { line-height: 2 }
 
-.uppercase { text-transform: uppercase }
-.lowercase { text-transform: lowercase }
-
-.antialiased {
+.font-antialiased {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.subpixel-antialiased {
+.font-subpixel {
   -webkit-font-smoothing: auto;
   -moz-osx-font-smoothing: auto;
 }
@@ -74,5 +76,7 @@
   text-overflow: ellipsis;
 }
 
+.uppercase { text-transform: uppercase }
+.lowercase { text-transform: lowercase }
 .no-select { user-select: none }
 .no-wrap   { white-space: nowrap }

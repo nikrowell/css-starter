@@ -38,31 +38,18 @@ $colors: (
 
 :root {
 
-  --font-size: 1em;
   --font-body: #{$font-body};
   --font-heading: #{$font-heading};
-  --line-height: 1.4;
-
-  // TODO: move these to helpers/text?
-  // --text-scale: 1.333; // http://type-scale.com/
-  // --text-sm:  calc(1em / var(--text-scale));
-  // --text-md:  calc(1em * var(--text-scale));
-  // --text-lg:  calc(1em * var(--text-scale) * var(--text-scale));
-  // --text-xl:  calc(1em * var(--text-scale) * var(--text-scale) * var(--text-scale));
-  // --text-xxl: calc(1em * var(--text-scale) * var(--text-scale) * var(--text-scale) * var(--text-scale));
-
   --container-width: #{$container-width};
   --container-padding: #{$container-padding};
 
-  @media (min-width: 480px) {
-    --text-scale: 1.414;
-  }
+  font-size: 16px;
 
   @media (min-width: 768px) {
-    --font-size: 1.0625em;
+    font-size: 1.0625em;
   }
 
   @media (min-width: 1024px) {
-    --font-size: 1.125em;
+    font-size: 1.125em;
   }
 }
