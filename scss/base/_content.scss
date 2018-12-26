@@ -20,3 +20,34 @@
     margin-bottom: 0.5em;
   }
 }
+
+.lead {
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+.callout {
+  font-size: 1.2em;
+  margin-bottom: 2em;
+}
+
+.cta-link {
+  font-weight: 700;
+}
+.cta-link:after {
+  content: '\2192';
+  display: inline-block;
+  margin-left: 0.25em;
+  transition: transform 0.2s;
+}
+.cta-link:hover:after {
+  transform: translateX(3px);
+}
+
+.footnote {
+  font-size: 0.875em;
+  opacity: 0.7;
+}
+.footnote:last-child {
+  margin-top: 3em;
+}

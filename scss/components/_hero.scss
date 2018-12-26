@@ -1,0 +1,28 @@
+.hero {
+  display: flex;
+  width: 100%;
+  min-height: 400px;
+  background: #333;
+}
+.hero .container {
+  max-width: 550px;
+  height: auto;
+  margin: auto;
+  color: #FFF;
+  text-align: center;
+}
+// .hero__heading {
+//   font-size: 2.5em;
+//   margin: 0 0 0.5em 0;
+//   color: #FFF;
+// }
+// .hero__text {
+//   font-size: 1.125em;
+//   margin: 0;
+// }
+// .hero__image {
+//   @include fill;
+//   background-position: 50% 50%;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+// }
