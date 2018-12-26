@@ -1,27 +1,67 @@
 
 .nav {
-  @include center-y;
-  left: auto;
-  right: $container-padding;
+  width: 100%;
+  padding: $container-padding;
+  padding: var(--container-padding);
+  background: #333;
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  top: 100%;
 }
-.nav__item {
-  display: inline-flex;
-  align-items: center;
-  margin-left: 0.5em;
-  margin-right: 0.5em;
+.nav__item a {
+  display: block;
+  text-decoration: none;
 }
 .nav__item > a {
+  color: #FFF;
+  padding: 0.5em 0.75em;
   text-transform: uppercase;
 }
 
 .nav-toggle {
-  display: none;
+  @include center-y;
+  right: $container-padding;
 }
 
 @media (min-width: $lg) {
 
-  .nav-toggle {
+  .nav {
     @include center-y;
+    width: auto;
+    left: auto;
     right: $container-padding;
+    padding: 0;
+  }
+  .nav__item {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+  }
+  .nav__submenu {
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    top: 100%;
+    padding: 10px 20px;
+    min-width: 200px;
+    background: #444;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .2s ease;
+  }
+  .nav__item:hover .nav__submenu,
+  .nav__item.active .nav__submenu {
+    visibility: visible;
+    opacity: 1;
+  }
+  .nav__submenu a {
+    font-size: 0.875em;
+    padding: 5px 0;
+    white-space: nowrap;
+  }
+
+  .nav-toggle {
+    display: none;
   }
 }
