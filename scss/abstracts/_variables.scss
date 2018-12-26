@@ -12,11 +12,11 @@ $lg: 1024px;
 $xl: 1200px;
 
 $breakpoints: (
-  xs: 'min-width: #{$xs}',
-  sm: 'min-width: #{$sm}',
-  md: 'min-width: #{$md}',
-  lg: 'min-width: #{$lg}',
-  xl: 'min-width: #{$xl}',
+  'xs': 'min-width: #{$xs}',
+  'sm': 'min-width: #{$sm}',
+  'md': 'min-width: #{$md}',
+  'lg': 'min-width: #{$lg}',
+  'xl': 'min-width: #{$xl}',
 );
 
 $color-black: #000;
@@ -30,10 +30,10 @@ $color-link: $color-primary;
 $color-link-hover: darken($color-primary,15);
 
 $colors: (
-  black: $color-black,
-  white: $color-white,
-  red: $color-red,
-  primary: $color-primary,
+  'black': $color-black,
+  'white': $color-white,
+  'red': $color-red,
+  'primary': $color-primary,
 );
 
 :root {
