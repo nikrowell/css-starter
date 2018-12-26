@@ -61,6 +61,17 @@
 .leading-normal { line-height: 1.5 }
 .leading-loose  { line-height: 2 }
 
+.uppercase      { text-transform: uppercase }
+.lowercase      { text-transform: lowercase }
+.no-select      { user-select: none }
+.no-wrap        { white-space: nowrap }
+
+.truncate {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 .font-antialiased {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -69,14 +80,3 @@
   -webkit-font-smoothing: auto;
   -moz-osx-font-smoothing: auto;
 }
-
-.truncate {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.uppercase { text-transform: uppercase }
-.lowercase { text-transform: lowercase }
-.no-select { user-select: none }
-.no-wrap   { white-space: nowrap }

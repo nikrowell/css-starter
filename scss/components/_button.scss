@@ -7,13 +7,13 @@
   font-size: 1rem;
   font-family: $font-heading;
   line-height: 1;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #FFF;
+  color: $color-white;
   background-color: $color-primary;
   border-radius: 5px;
   border: 0;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
   white-space: nowrap;
   outline: none;
   cursor: pointer;
@@ -22,11 +22,13 @@
   -moz-appearance: none;
   appearance: none;
 }
-.btn:hover {
+.btn:hover,
+.btn:focus {
   color: #FFF;
-  background-color: #555;
+  background-color: darken($color-primary,15);
   text-decoration: none;
 }
+.btn.disabled,
 .btn[disabled] {
   pointer-events: none;
   cursor: not-allowed;

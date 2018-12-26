@@ -27,7 +27,7 @@ $color-bg: #FFF;
 $color-text: #333;
 $color-line: rgba($color-text,0.25);
 $color-link: $color-primary;
-$color-link-hover: lighten($color-primary,10);
+$color-link-hover: darken($color-primary,15);
 
 $colors: (
   black: $color-black,

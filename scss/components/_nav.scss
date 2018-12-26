@@ -1,24 +1,27 @@
 
-.nav-toggle {
+.nav {
   @include center-y;
+  left: auto;
   right: $container-padding;
 }
+.nav__item {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+.nav__item > a {
+  text-transform: uppercase;
+}
 
-.nav {
-  position: fixed;
-  z-index: 100;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  max-width: 600px;
-  padding: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: #E5E5E5;
-  transform: translate3d(-100%,0,0);
-  transition: transform 0.4s cubic-bezier(0.23,1,0.32,1);
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
+.nav-toggle {
+  display: none;
+}
+
+@media (min-width: $lg) {
+
+  .nav-toggle {
+    @include center-y;
+    right: $container-padding;
+  }
 }
