@@ -1,13 +1,26 @@
 
+.pad-x {
+  padding-left: $container-padding;
+  padding-left: var(--container-padding);
+  padding-right: $container-padding;
+  padding-right: var(--container-padding);
+}
+.pad-y {
+  padding-top: $container-padding;
+  padding-top: var(--container-padding);
+  padding-bottom: $container-padding;
+  padding-bottom: var(--container-padding);
+}
+.pad {
+  @extend .pad-x;
+  @extend .pad-y;
+}
 .container {
   width: 100%;
   max-width: $container-width;
   max-width: var(--container-width);
+  position: relative; // TODO: do we always want to assume this?
   margin-left: auto;
   margin-right: auto;
-  padding-left: $container-padding;
-  padding-right: $container-padding;
-  padding-left: var(--container-padding);
-  padding-right: var(--container-padding);
-  position: relative;
+  @extend .pad-x;
 }

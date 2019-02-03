@@ -50,7 +50,7 @@
   @return $sorted;
 }
 
-@function strip-unit($number) {
+@function strip-unit($value) {
   @if type-of($value) == 'number' and not unitless($value) {
     @return $value / ($value * 0 + 1);
   }

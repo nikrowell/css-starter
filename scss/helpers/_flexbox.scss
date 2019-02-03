@@ -35,6 +35,15 @@
   .#{$prefix}content-around  { align-content: space-around }
   .#{$prefix}content-evenly  { align-content: space-evenly }
 
+  .#{$prefix}flex-1	         { flex: 1 }
+  .#{$prefix}flex-initial	   { flex: initial }
+  .#{$prefix}flex-auto	     { flex: auto }
+  .#{$prefix}flex-none	     { flex: none }
+  .#{$prefix}flex-grow	     { flex-grow: 1 }
+  .#{$prefix}flex-no-grow	   { flex-grow: 0 }
+  .#{$prefix}flex-shrink	   { flex-shrink: 1 }
+  .#{$prefix}flex-no-shrink	 { flex-shrink: 0 }
+
   .#{$prefix}order-first     { order: -1 }
   .#{$prefix}order-last      { order: 9999 }
 }
@@ -46,9 +55,3 @@
     @include flexbox($prefix);
   }
 }
-
-.flex-none    { flex: none }
-.flex-auto    { flex: 1 1 auto }
-.flex-wrap    { flex-wrap: wrap }
-.flex-grow    { flex-grow: 1 }
-.flex-shrink  { flex-shrink: 1 }

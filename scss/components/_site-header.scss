@@ -1,17 +1,11 @@
 
-.site-header {
-  color: #FFF;
-  background: #335;
-}
-
 .logo {
   width: 40%;
-  max-width: 180px;
-  @include ratio(320, 125);
+  max-width: 220px;
+  @include ratio(540, 122);
 }
 .logo a {
-  background-color: #F00;
-  // background-image: url('../images/logo.svg');
-  // background-size: contain;
+  background-image: url('../images/logo.svg');
+  background-size: contain;
   text-indent: -9999px;
 }

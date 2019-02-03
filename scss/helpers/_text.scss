@@ -1,10 +1,10 @@
 
-:root {
+// TODO: this section needs work!
 
+:root {
   // http://type-scale.com/
   --text-base: 1rem;
   --text-scale: 1.414;
-
   --text-xs: calc(1rem / var(--text-scale) / var(--text-scale));
   --text-sm: calc(1rem / var(--text-scale));
   --text-md: calc(1rem * var(--text-scale));
@@ -39,32 +39,34 @@
   }
 }
 
-.font-body      { font-family: $font-body }
-.font-heading   { font-family: $font-heading }
-.font-hairline  { font-weight: 100 }
-.font-thin      { font-weight: 200 }
-.font-light     { font-weight: 300 }
-.font-normal    { font-weight: 400 }
-.font-medium    { font-weight: 500 }
-.font-semibold  { font-weight: 600 }
-.font-bold      { font-weight: 700 }
-.font-heavy     { font-weight: 800 }
-.font-black     { font-weight: 900 }
-.font-italic    { font-style: italic }
+.f-body      { font-family: $font-body }
+.f-heading   { font-family: $font-heading }
+.f-italic    { font-style: italic }
+.f-hairline  { font-weight: 100 }
+.f-thin      { font-weight: 200 }
+.f-light     { font-weight: 300 }
+.f-normal    { font-weight: 400 }
+.f-medium    { font-weight: 500 }
+.f-semibold  { font-weight: 600 }
+.f-bold      { font-weight: 700 }
+.f-heavy     { font-weight: 800 }
+.f-black     { font-weight: 900 }
 
-.kerning-tight  { letter-spacing: -0.05em }
-.kerning-normal { letter-spacing: 0 }
-.kerning-loose  { letter-spacing: 0.05em }
+.ls-0        { letter-spacing: 0 }
+.ls-tight    { letter-spacing: -0.05em }
+.ls-loose    { letter-spacing: 0.05em }
 
-.leading-none   { line-height: 1 }
-.leading-tight  { line-height: 1.25 }
-.leading-normal { line-height: 1.5 }
-.leading-loose  { line-height: 2 }
+.lh-0        { line-height: 0 }
+.lh-1        { line-height: 1 }
+.lh-tight    { line-height: 1.25 }
+.lh-normal   { line-height: 1.5; line-height: var(--line-height, 1.5) }
+.lh-loose    { line-height: 2 }
 
-.uppercase      { text-transform: uppercase }
-.lowercase      { text-transform: lowercase }
-.no-select      { user-select: none }
-.no-wrap        { white-space: nowrap }
+.lowercase   { text-transform: lowercase }
+.uppercase   { text-transform: uppercase }
+.underline   { text-decoration: underline }
+.no-select   { user-select: none }
+.no-wrap     { white-space: nowrap }
 
 .truncate {
   overflow: hidden;

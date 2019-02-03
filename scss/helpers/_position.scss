@@ -2,13 +2,26 @@
 .static   { position: static }
 .relative { position: relative }
 .absolute { position: absolute }
-.sticky   { position: sticky }
 .fixed    { position: fixed }
+.sticky   { position: -webkit-sticky; position: sticky }
 
-.pos-top    { top: 0 }
-.pos-right  { right: 0 }
-.pos-bottom { bottom: 0 }
-.pos-left   { left: 0 }
+.pin-t    { top: 0 }
+.pin-r    { right: 0 }
+.pin-b    { bottom: 0 }
+.pin-l    { left: 0 }
+
+.pin-x {
+  @extend .pin-l;
+  @extend .pin-r;
+}
+.pin-y {
+  @extend .pin-t;
+  @extend .pin-b;
+}
+.pin {
+  @extend .pin-x;
+  @extend .pin-y;
+}
 
 @each $prefix, $query in $breakpoints {
 
@@ -20,18 +33,19 @@
     .#{$prefix}\:sticky   { position: sticky }
     .#{$prefix}\:fixed    { position: fixed }
 
-    .#{$prefix}\:pos-top    { top: 0; bottom: auto; }
-    .#{$prefix}\:pos-right  { right: 0; left: auto; }
-    .#{$prefix}\:pos-bottom { bottom: 0; top: auto; }
-    .#{$prefix}\:pos-left   { left: 0; right: auto; }
+    .#{$prefix}\:pin-t    { top: 0; bottom: auto; }
+    .#{$prefix}\:pin-r    { right: 0; left: auto; }
+    .#{$prefix}\:pin-b    { bottom: 0; top: auto; }
+    .#{$prefix}\:pin-l    { left: 0; right: auto; }
+    .#{$prefix}\:pin-x    { left: 0; right: 0; }
+    .#{$prefix}\:pin-y    { top: 0; bottom: 0; }
+    .#{$prefix}\:pin      { top: 0; right: 0; bottom: 0; left: 0; }
   }
 }
 
-.center {
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%,-50%);
-}
+.fit-cover   { object-fit: cover }
+.fit-contain { object-fit: contain }
+
 .center-x {
   left: 50%;
   transform: translateX(-50%);
@@ -39,6 +53,11 @@
 .center-y {
   top: 50%;
   transform: translateY(-50%);
+}
+.center {
+  @extend .center-x;
+  @extend .center-y;
+  transform: translate(-50%,-50%);
 }
 
 .z-0  { z-index: 0 }

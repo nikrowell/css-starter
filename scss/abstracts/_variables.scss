@@ -21,19 +21,17 @@ $breakpoints: (
 
 $color-black: #000;
 $color-white: #FFF;
-$color-red: #F00;
-$color-primary: #BADA55;
+$color-green: #BADA55;
 $color-bg: #FFF;
 $color-text: #333;
 $color-line: rgba($color-text,0.25);
-$color-link: $color-primary;
-$color-link-hover: darken($color-primary,15);
+$color-link: $color-green;
+$color-link-hover: darken($color-green,15);
 
 $colors: (
   'black': $color-black,
   'white': $color-white,
-  'red': $color-red,
-  'primary': $color-primary,
+  'green': $color-green,
 );
 
 :root {

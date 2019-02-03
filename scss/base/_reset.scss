@@ -2,6 +2,7 @@
   box-sizing: border-box;
 }
 html {
+  overflow-x: hidden;
   scroll-behavior: smooth;
   text-rendering: optimizeLegibility;
   -webkit-tap-highlight-color: transparent;
@@ -9,7 +10,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, p {
+body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, p, figure {
   margin: 0;
   padding: 0;
 }
@@ -17,8 +18,6 @@ article, aside, audio, canvas, details, figcaption, figure, footer, header, hgro
   display: block;
 }
 img, embed, iframe, object, audio, video {
-  width: auto;
-  height: auto;
   max-width: 100%;
   border: 0;
 }
@@ -32,4 +31,33 @@ ol, ul {
 }
 template, [hidden] {
   display: none !important;
+}
+
+input:not([type="checkbox"]),
+input:not([type="radio"]),
+textarea,
+select,
+button {
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+}
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button { -webkit-appearance: none; }
+}
+button {
+  border: 0;
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+textarea {
+  overflow: auto;
+  resize: vertical;
 }

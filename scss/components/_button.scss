@@ -8,7 +8,7 @@
   font-family: $font-heading;
   line-height: 1;
   color: $color-white;
-  background-color: $color-primary;
+  background-color: $color-black;
   border-radius: 5px;
   border: 0;
   text-align: center;
@@ -25,7 +25,7 @@
 .btn:hover,
 .btn:focus {
   color: #FFF;
-  background-color: darken($color-primary,15);
+  background-color: lighten($color-black,15);
   text-decoration: none;
 }
 .btn.disabled,

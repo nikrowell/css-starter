@@ -38,5 +38,7 @@
   -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
-.no-overflow  { overflow: hidden }
-.no-pointer   { pointer-events: none }
+.no-overflow-x { overflow-x: hidden }
+.no-overflow-y { overflow-y: hidden }
+.no-overflow   { overflow: hidden }
+.no-pointer    { pointer-events: none }
