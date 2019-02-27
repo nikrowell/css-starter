@@ -30,8 +30,8 @@
     .#{$prefix}\:static   { position: static }
     .#{$prefix}\:relative { position: relative }
     .#{$prefix}\:absolute { position: absolute }
-    .#{$prefix}\:sticky   { position: sticky }
     .#{$prefix}\:fixed    { position: fixed }
+    .#{$prefix}\:sticky   { position: -webkit-sticky; position: sticky }
 
     .#{$prefix}\:pin-t    { top: 0; bottom: auto; }
     .#{$prefix}\:pin-r    { right: 0; left: auto; }

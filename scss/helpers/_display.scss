@@ -29,16 +29,22 @@
 
 .scroll-x {
   overflow-x: auto;
+  scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 .scroll-y {
   overflow-y: auto;
+  scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
+.cursor-pointer { cursor: pointer; }
+.cursor-default { cursor: default; }
+
 .no-overflow-x { overflow-x: hidden }
 .no-overflow-y { overflow-y: hidden }
 .no-overflow   { overflow: hidden }
+.no-outline    { outline: none }
 .no-pointer    { pointer-events: none }

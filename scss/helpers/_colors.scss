@@ -1,23 +1,11 @@
 
 @each $name, $color in $colors {
 
-  .bg-#{$name} {
-    background-color: #{$color}
-  }
-  .border-#{$name} {
-    border-color: #{$color}
-  }
-  .color-#{$name} {
-    color: #{$color}
-  }
+  .c-#{$name}  { color: #{$color} }
+  .b-#{$name}  { border-color: #{$color} }
+  .bg-#{$name} { background-color: #{$color} }
 
-  // .hover\:bg-#{$name} {
-  //   background-color: #{$color}
-  // }
-  // .hover\:border-#{$name} {
-  //   border-color: #{$color}
-  // }
-  // .hover\:color-#{$name} {
-  //   color: #{$color}
-  // }
+  .hover\:c-#{$name}:hover  { color: #{$color} }
+  .hover\:b-#{$name}:hover  { border-color: #{$color} }
+  .hover\:bg-#{$name}:hover { background-color: #{$color} }
 }

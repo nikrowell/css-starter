@@ -1,16 +1,15 @@
 
-// TODO: this section needs work!
-
 :root {
+  // TODO: this needs work!
   // http://type-scale.com/
   --text-base: 1rem;
   --text-scale: 1.414;
-  --text-xs: calc(1rem / var(--text-scale) / var(--text-scale));
-  --text-sm: calc(1rem / var(--text-scale));
-  --text-md: calc(1rem * var(--text-scale));
-  --text-lg: calc(1rem * var(--text-scale) * var(--text-scale));
-  --text-xl: calc(1rem * var(--text-scale) * var(--text-scale) * var(--text-scale));
-  --text-xxl: calc(1rem * var(--text-scale) * var(--text-scale) * var(--text-scale) * var(--text-scale));
+  --text-xs:  calc(var(--text-base) / var(--text-scale) / var(--text-scale));
+  --text-sm:  calc(var(--text-base) / var(--text-scale));
+  --text-md:  calc(var(--text-base) * var(--text-scale));
+  --text-lg:  calc(var(--text-base) * var(--text-scale) * var(--text-scale));
+  --text-xl:  calc(var(--text-base) * var(--text-scale) * var(--text-scale) * var(--text-scale));
+  --text-xxl: calc(var(--text-base) * var(--text-scale) * var(--text-scale) * var(--text-scale) * var(--text-scale));
 }
 
 @mixin text($prefix: '') {
@@ -19,12 +18,12 @@
     $prefix: '#{$prefix}\\:';
   }
 
-  .#{$prefix}text-xs  { font-size: var(--text-xs) }
-  .#{$prefix}text-sm  { font-size: var(--text-sm) }
-  .#{$prefix}text-md  { font-size: var(--text-md) }
-  .#{$prefix}text-lg  { font-size: var(--text-lg) }
-  .#{$prefix}text-xl  { font-size: var(--text-xl) }
-  .#{$prefix}text-xxl { font-size: var(--text-xxl) }
+  .#{$prefix}f-xs  { font-size: var(--text-xs) }
+  .#{$prefix}f-sm  { font-size: var(--text-sm) }
+  .#{$prefix}f-md  { font-size: var(--text-md) }
+  .#{$prefix}f-lg  { font-size: var(--text-lg) }
+  .#{$prefix}f-xl  { font-size: var(--text-xl) }
+  .#{$prefix}f-xxl { font-size: var(--text-xxl) }
 
   .#{$prefix}text-left   { text-align: left }
   .#{$prefix}text-right  { text-align: right }
@@ -39,18 +38,29 @@
   }
 }
 
-.f-body      { font-family: $font-body }
-.f-heading   { font-family: $font-heading }
-.f-italic    { font-style: italic }
-.f-hairline  { font-weight: 100 }
-.f-thin      { font-weight: 200 }
-.f-light     { font-weight: 300 }
-.f-normal    { font-weight: 400 }
-.f-medium    { font-weight: 500 }
-.f-semibold  { font-weight: 600 }
-.f-bold      { font-weight: 700 }
-.f-heavy     { font-weight: 800 }
-.f-black     { font-weight: 900 }
+.f-0 { font-size: 0 }
+
+// .f-primary   { font-family: $font-primary }
+// .f-secondary { font-family: $font-secondary }
+
+.f-100 { font-weight: 100 }
+.f-200 { font-weight: 200 }
+.f-300 { font-weight: 300 }
+.f-400 { font-weight: 400 }
+.f-500 { font-weight: 500 }
+.f-600 { font-weight: 600 }
+.f-700 { font-weight: 700 }
+.f-800 { font-weight: 800 }
+.f-900 { font-weight: 900 }
+
+.f-antialiased {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.f-subpixel {
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
+}
 
 .ls-0        { letter-spacing: 0 }
 .ls-tight    { letter-spacing: -0.05em }
@@ -62,6 +72,7 @@
 .lh-normal   { line-height: 1.5; line-height: var(--line-height, 1.5) }
 .lh-loose    { line-height: 2 }
 
+.italic      { font-style: italic }
 .lowercase   { text-transform: lowercase }
 .uppercase   { text-transform: uppercase }
 .underline   { text-decoration: underline }
@@ -72,13 +83,4 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-}
-
-.font-antialiased {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.font-subpixel {
-  -webkit-font-smoothing: auto;
-  -moz-osx-font-smoothing: auto;
 }

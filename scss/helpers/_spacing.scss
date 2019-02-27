@@ -1,14 +1,13 @@
 
 :root {
   // https://type-scale.com/
-  --spacing-unit: 0.5rem;
+  --spacing-unit: 1rem;
   --spacing-scale: 1.618;
-  --spacing-1: calc(var(--spacing-unit) * var(--spacing-scale));
-  --spacing-2: calc(var(--spacing-1)    * var(--spacing-scale));
-  --spacing-3: calc(var(--spacing-2)    * var(--spacing-scale));
-  --spacing-4: calc(var(--spacing-3)    * var(--spacing-scale));
-  --spacing-5: calc(var(--spacing-4)    * var(--spacing-scale));
-  --spacing-6: calc(var(--spacing-5)    * var(--spacing-scale));
+  --spacing-1: var(--spacing-unit);
+  --spacing-2: calc(var(--spacing-1) * var(--spacing-scale));
+  --spacing-3: calc(var(--spacing-2) * var(--spacing-scale));
+  --spacing-4: calc(var(--spacing-3) * var(--spacing-scale));
+  --spacing-5: calc(var(--spacing-4) * var(--spacing-scale));
 }
 
 @mixin spacing($prefix: '') {
@@ -17,7 +16,7 @@
     $prefix: '#{$prefix}\\:';
   }
 
-  @for $i from 0 through 6 {
+  @for $i from 0 through 5 {
 
     $value: 0;
     @if ($i != 0) { $value: var(--spacing-#{$i}); }

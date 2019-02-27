@@ -19,7 +19,6 @@
   width: 100%;
   max-width: $container-width;
   max-width: var(--container-width);
-  position: relative; // TODO: do we always want to assume this?
   margin-left: auto;
   margin-right: auto;
   @extend .pad-x;
